@@ -1,0 +1,6 @@
+<canvas id="canvasId" #canvasRef></canvas>
+<div>
+  <button class="btn btn-primary" (click)="clearZone()">Limpiar</button>
+  <button class="btn btn-primary" (click)="download()">Descargar Imagen</button>
+</div>
+<a #imageCanvas download="firma.png" [href]="canvasRef.nativeElement?.toDataURL().replace('data:image/png;base64,', '')"></a>
